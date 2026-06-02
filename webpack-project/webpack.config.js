@@ -1,5 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+  // ... ваши остальные настройки (entry, output, plugins и т.д.) ...
+  devServer: {
+    port: 3005,
+    open: true // автоматически откроет вкладку в браузере
+  }
+};
 
 module.exports = {
 
