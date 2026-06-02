@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
+
       - name: Сборка Webpack
         run: |
           cd webpack-project
@@ -25,13 +25,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: webpack-build
-          path: webpack-project/dist
-          compression-level: 0  # v4 требует явного указания (опционально)
-          overwrite: true       # для перезаписи артефактов
+          path: webpack-project/dist/
+          overwrite: true
 
   build-vite:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v4
       
       - uses: actions/setup-node@v4
@@ -51,4 +50,3 @@ jobs:
           path: vite-project/vite/dist
           compression-level: 0
           overwrite: true
-
