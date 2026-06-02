@@ -41,7 +41,7 @@ jobs:
       - name: Сборка Vite
         run: |
           cd vite-project/vite
-          npm install --package-lock-only
+          npm install vite @vitejs/plugin-vue --no-save
           npm run build
       
       - name: Сохранение артефактов
