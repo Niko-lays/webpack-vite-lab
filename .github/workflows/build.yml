@@ -40,8 +40,8 @@ jobs:
       - name: Сборка Vite
         run: |
           cd vite-project/vite
-          npm install vite @vitejs/plugin-vue --no-save
-          npm run build
+          npx --yes vite build
+
       
       - name: Сохранение артефактов
         uses: actions/upload-artifact@v4
